@@ -1,0 +1,101 @@
+*{
+    @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;900&family=Young+Serif&display=swap');
+    
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    color: rgb(1, 178, 243);
+}
+.main{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: red;
+    /* animation-duration: 3s;
+    animation-delay: 0s;
+    animation-name: animation;
+    animation-iteration-count: infinite; */
+
+    animation: animation 5s 0s infinite linear;
+    /* ease in
+    ease out */
+}
+@keyframes animation{
+    0%{
+background: green;
+top: 0px;
+left: 0px;
+    }
+    25%{
+        top: 0px;
+        left: 400px;
+        background: orange;
+    }
+    50%{
+        top: 400px;
+        left: 400px;
+        background: blue;
+    }
+    75%{
+        top: 400px;
+        left: 0px;
+        background: lightblue;
+    }
+    100%{
+        left: 0px;
+        top: 0px;
+        background: pink;
+    }
+}
+.truck {
+    position: fixed;
+    bottom: 0px;
+    left: -150px; 
+    animation: truckanimation 12s 0s infinite linear; 
+}
+@keyframes truckanimation{
+    0%{
+        left: -150px;
+    }
+    100%{
+left: 120%;
+    }
+}
+
+
+@keyframes wheelrotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360%);
+    }
+}
+.tires img{
+    animation: wheelrotate 3s 0s infinite linear;
+}
+
+.rotating {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+   right: 0px;
+    border-radius: 50px;
+    animation: rotate 10s linear infinite;
+    border: 20px solid blue;
+    opacity: 0.1;
+
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
